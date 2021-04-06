@@ -1,5 +1,4 @@
 #pragma once
-// classes1def.cpp
 
 #include <iostream>
 #include <fstream>
@@ -62,7 +61,7 @@ protected:
 public:
 	enum SpecialTextures {Bordered, NonBordered};
 	
-	Block(std::string name_ = "None", const int frames_ = 1, const bool solid_ = true) : blockName(name_), currentFrame(1), solid(solid_), amountOfFrames(frames_) {
+	Block(std::string name_ = "None", const int frames_ = 1, const bool solid_ = true) : blockName(name_), currentFrame(0), solid(solid_), amountOfFrames(frames_) {
 	}
 	virtual ~Block() {}
 	
@@ -70,12 +69,14 @@ public:
 	
 	void setTexture(sf::Texture* texture_) {
 		texture = texture_;
+		std::cout << blockName << "\'s texture\'s dimensions - " << texture->getSize().x << "x" << texture->getSize().y << '\n';
 		reloadTexture();
 	}
 	sf::Texture* getTexture() const {return texture;}
 	// void setSpecialTexture(SpecialTextures spec_);
 	
 	int nextFrame();
+	void setAmountOfFrames(int amount) {amountOfFrames = amount;}
 	
 	void setSize(const sf::Vector2f& size_) {block.setSize(size_);}
 	sf::Vector2f getSize() const {return block.getSize();}

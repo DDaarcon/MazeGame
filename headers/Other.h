@@ -15,7 +15,7 @@ class TextureHandler {
 	const static std::string dictionary;
 
 	public:
-	//fileName - key and file name without file extension
+	//fileName - key or file name without file extension
 	static sf::Texture* getTextureAddress(const std::string& fileName, const std::string& extension = "");
 
 	static void load(const std::string& fileName, const std::string& extension);
@@ -52,7 +52,7 @@ public:
 // TIMEDELAY CLASS END
 class StageLoader {
 	
-	public:
+public:
 
 	static bool loadFromFile(const std::string& filename_, Stage& stage_);
 };

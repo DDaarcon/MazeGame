@@ -17,13 +17,13 @@ sf::Texture* TextureHandler::getTextureAddress(const std::string& fileName, cons
 				*rtnTxt = tempTexture;
 				return rtnTxt;
 			} else {
-				std::cout << "Failed to load from file" << std::endl;
+				std::cerr << "Failed to load from file" << std::endl;
 				return nullptr;
 			}
 				
 		}
 		else {
-			std::cout << "No extension found" << std::endl;
+			std::cerr << "No extension found" << std::endl;
 			return nullptr;
 		}
 	}
@@ -90,3 +90,15 @@ bool StageLoader::loadFromFile(const std::string& filename_, Stage& stage_) {
 	file.close();
 	return true;
 }
+
+// bool StageLoader::loadFromFile(const std::string& filenameWithExtension, Stage& stage_) {
+// 	std::ifstream inFile;
+// 	inFile.open(filenameWithExtension);
+
+// 	std::string line;
+// 	std::getline(inFile, line);
+
+// 	if (line == "") {
+		
+// 	}
+// }

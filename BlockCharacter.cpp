@@ -20,14 +20,14 @@ void Block::draw(sf::RenderWindow& w) const
 }
 
 int Block::nextFrame(){
-	int sizeOfFrameX = texture->getSize().x / amountOfFrames;
 	if (amountOfFrames > 1){
-		block.setTextureRect(sf::IntRect(sizeOfFrameX * (currentFrame - 1), 0, sizeOfFrameX, texture->getSize().y));
 		
-		if (currentFrame == amountOfFrames)
-			currentFrame = 1;
-		else
-			currentFrame++;
+		int sizeOfFrameX = texture->getSize().x / amountOfFrames;
+		block.setTextureRect(sf::IntRect(sizeOfFrameX * (currentFrame), 0, sizeOfFrameX, texture->getSize().y));
+		
+		if (currentFrame++ >= amountOfFrames)
+			currentFrame = 0;
+		
 	}
 	
 	return currentFrame;
