@@ -1,9 +1,21 @@
-MAIN_FILE = Main.cpp
-STAGE_FILE = Stage.cpp
-BC_FILE = BlockCharacter.cpp
-OTHER_FILE = Other.cpp
+MAIN_FILE = Main
+STAGE_FILE = Stage
+BC_FILE = BlockCharacter
+OTHER_FILE = Other
 
 EXE_NAME = Game
 
-all : $(MAIN_FILE) $(STAGE_FILE) $(BC_FILE) $(OTHER_FILE)
-	g++ $(MAIN_FILE) $(STAGE_FILE) $(BC_FILE) $(OTHER_FILE) -lsfml-graphics -lsfml-window -lsfml-system -o$(EXE_NAME)
+$(EXE_NAME) : $(MAIN_FILE).o $(STAGE_FILE).o $(BC_FILE).o $(OTHER_FILE).o
+	g++ $(MAIN_FILE).o $(STAGE_FILE).o $(BC_FILE).o $(OTHER_FILE).o -lsfml-graphics -lsfml-window -lsfml-system -o$(EXE_NAME)
+
+$(MAIN_FILE).o :
+	g++ -c $(MAIN_FILE).cpp -o $(MAIN_FILE).o
+
+$(STAGE_FILE).o :
+	g++ -c $(STAGE_FILE).cpp -o $(STAGE_FILE).o
+
+$(BC_FILE).o :
+	g++ -c $(BC_FILE).cpp -o $(BC_FILE).o
+
+$(OTHER_FILE).o :
+	g++ -c $(OTHER_FILE).cpp -o $(OTHER_FILE).o
