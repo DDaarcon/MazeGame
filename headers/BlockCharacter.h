@@ -69,7 +69,7 @@ public:
 	
 	void setTexture(sf::Texture* texture_) {
 		texture = texture_;
-		std::cout << blockName << "\'s texture\'s dimensions - " << texture->getSize().x << "x" << texture->getSize().y << '\n';
+		// std::cout << blockName << "\'s texture\'s dimensions - " << texture->getSize().x << "x" << texture->getSize().y << '\n';
 		reloadTexture();
 	}
 	sf::Texture* getTexture() const {return texture;}

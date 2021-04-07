@@ -41,7 +41,7 @@ int main(){
 	
 
 	stage.setBlockDynamic(sf::Vector2i(1, 2), playerOne);
-	// stage.setBlockDynamic(sf::Vector2i(6, 6), someBlock);
+	stage.setBlockDynamic(sf::Vector2i(15, 3), someBlock);
 	// stage.makeBorders(BBBlock);
 	//	END OF TEST OF STAGE
 	

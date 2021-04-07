@@ -25,7 +25,7 @@ int Block::nextFrame(){
 		int sizeOfFrameX = texture->getSize().x / amountOfFrames;
 		block.setTextureRect(sf::IntRect(sizeOfFrameX * (currentFrame), 0, sizeOfFrameX, texture->getSize().y));
 		
-		if (currentFrame++ >= amountOfFrames)
+		if (currentFrame++ >= amountOfFrames - 1)
 			currentFrame = 0;
 		
 	}
