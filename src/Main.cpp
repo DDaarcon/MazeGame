@@ -1,8 +1,9 @@
 #include <cmath>
 #include <iostream>
-#include "headers/BlockCharacter.h"
-#include "headers/Stage.h"
-#include "headers/Other.h"
+#include "BlockCharacter.h"
+#include "Stage.h"
+#include "Other.h"
+#include "TextureManager.h"
 
 void mouseBlockCreator(sf::Window& window_, Stage& st_, Block& block_);
 
@@ -28,13 +29,13 @@ int main(){
 	
 	//	BEGIN OF TEST OF STAGE
 	Character playerOne;
-	playerOne.setTexture(TextureHandler::getTextureAddress("pionek", "png"));
+	playerOne.setTexture(TextureManager::getTextureAddress("pionek", "png"));
 	
 	Block BBBlock("Wall");
-	BBBlock.setTexture(TextureHandler::getTextureAddress("black_block", "png"));
+	BBBlock.setTexture(TextureManager::getTextureAddress("black_block", "png"));
 
 	Block someBlock("Cauldron", 4);
-	someBlock.setTexture(TextureHandler::getTextureAddress("cauldron", "png"));
+	someBlock.setTexture(TextureManager::getTextureAddress("cauldron", "png"));
 	
 	Stage stage(sf::Vector2i(100, 100), sf::Vector2f(32, 32), sf::Vector2f(0, 0));
 	StageLoader::loadFromFile("stage_to_load.txt", stage);

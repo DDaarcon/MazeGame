@@ -27,7 +27,7 @@
  * +setBlock - zamiana przsyłania przez wartość na przesyłanie przez referencję
  * +sf::Vector2<> na sf::Vector2<>&
  * -Zmniejszenie liczby obiektów sf::Textures, w klasie Block przechowywany jest wskaźnik do konkretnej tekstury zamiast jej kopii
- * ?Klasa TextureHandler do przetrzymywania textur, textury zapisane w map z kluczami w postaci string (nazwy plikow w razie nie posiadania wczytanej textury)
+ * ?Klasa TextureManager do przetrzymywania textur, textury zapisane w map z kluczami w postaci string (nazwy plikow w razie nie posiadania wczytanej textury)
  * 
  * PLANY:
  * -zapis i wczytywanie stanu Stage z pliku
@@ -61,7 +61,7 @@ protected:
 public:
 	enum SpecialTextures {Bordered, NonBordered};
 	
-	Block(std::string name_ = "None", const int frames_ = 1, const bool solid_ = true) : blockName(name_), currentFrame(0), solid(solid_), amountOfFrames(frames_) {
+	Block(std::string name_ = "None", const int frames_ = 1, const bool solid_ = true) : blockName(name_), currentFrame(0), solid(solid_), amountOfFrames(frames_), texture(nullptr) {
 	}
 	virtual ~Block() {}
 	

@@ -1,2 +1,7 @@
 BACKUP/
 *.o
+/.vs
+/packages
+/x64
+/**/.vs/**/*
+/**/x64/**/*

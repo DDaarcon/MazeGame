@@ -1,4 +1,4 @@
-#include "headers/BlockCharacter.h"
+#include "BlockCharacter.h"
 								// BLOCK CLASS BEGIN
 
 // void Block::setSpecialTexture(Block::SpecialTextures spec_){
