@@ -47,3 +47,14 @@ TEST(BoardPiecesStateTests, WHEN_used_valid_coords_THEN_return_piece) {
     EXPECT_EQ(&(stateData->at(2 * 3 + 0)), (BoardPiece*)state.at(0, 2));
     EXPECT_EQ(&(stateData->at(0 * 3 + 1)), (BoardPiece*)state.at(1, 0));
 }
+
+TEST(BoardPiecesStateTests, WHEN_asked_for_iterator_THEN_return_valid_iterator) {
+    auto stateData = std::make_shared<std::vector<BoardPiece>>(testState);
+    BoardPiecesState state(stateData, 3, 4);
+
+    for (auto statePiece : state) {
+
+    }
+
+    EXPECT_EQ(stateData->begin(), state.begin());
+}

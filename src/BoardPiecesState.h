@@ -27,12 +27,14 @@ public:
         }
 
         _state = state;
-
-        BoardPiecesState* point = this;
     }
 
     trusted_ptr<BoardPiece> at(size_t x, size_t y) const;
 
+    std::vector<BoardPiece>::iterator begin() { return _state->begin(); }
+    std::vector<BoardPiece>::const_iterator begin() const { return static_cast<std::shared_ptr<const std::vector<BoardPiece>>>(_state)->begin(); }
+    std::vector<BoardPiece>::iterator end() { return _state->end(); }
+    std::vector<BoardPiece>::const_iterator end() const { return static_cast<std::shared_ptr<const std::vector<BoardPiece>>>(_state)->end(); }
 
     size_t getWidth() { return _width; }
     size_t getHeight() { return _height; }
