@@ -41,10 +41,10 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -137,9 +137,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\BlockCharacter.h" />
+    <ClInclude Include="src\GameLauncher.h" />
     <ClInclude Include="src\Other.h" />
     <ClInclude Include="src\Stage.h" />
-    <ClInclude Include="src\TextureManager.h" />
+    <ClInclude Include="src\TextureLoadData.h" />
+    <ClInclude Include="src\TextureLoader.h" />
+    <ClInclude Include="src\TexturePack.h" />
+    <ClInclude Include="src\TextureType.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="images\black_block.png" />
@@ -155,10 +159,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\BlockCharacter.cpp" />
+    <ClCompile Include="src\GameLauncher.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Other.cpp" />
     <ClCompile Include="src\Stage.cpp" />
-    <ClCompile Include="src\TextureManager.cpp" />
+    <ClCompile Include="src\TextureLoader.cpp" />
+    <ClCompile Include="src\TexturePack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -19,6 +19,18 @@
     <Filter Include="Header Files\Textures">
       <UniqueIdentifier>{fff80bd9-92a2-4739-8e71-b1faec014722}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Textures\Helpers">
+      <UniqueIdentifier>{a9dca2e9-6680-41ab-8582-88c7adae09f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Textures\Helpers">
+      <UniqueIdentifier>{8008fcef-78fc-4826-8a36-ac5543cb4739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Textures\Abstracts">
+      <UniqueIdentifier>{b033944f-a6b2-4538-9770-59efeff2d6e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Textures\Models">
+      <UniqueIdentifier>{b2fd17a6-d00a-4788-8536-694f853fedd0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BlockCharacter.h">
@@ -30,8 +42,20 @@
     <ClInclude Include="src\Stage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\TextureManager.h">
+    <ClInclude Include="src\TextureLoader.h">
+      <Filter>Header Files\Textures\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLauncher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TextureType.h">
       <Filter>Header Files\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TexturePack.h">
+      <Filter>Header Files\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TextureLoadData.h">
+      <Filter>Header Files\Textures\Models</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -75,7 +99,13 @@
     <ClCompile Include="src\Stage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\TextureManager.cpp">
+    <ClCompile Include="src\TextureLoader.cpp">
+      <Filter>Source Files\Textures\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLauncher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TexturePack.cpp">
       <Filter>Source Files\Textures</Filter>
     </ClCompile>
   </ItemGroup>

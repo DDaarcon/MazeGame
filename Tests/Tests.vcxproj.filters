@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="TexturePackTests.cpp">
+      <Filter>Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureLoaderTests.cpp">
+      <Filter>Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeTextureLoader.cpp">
+      <Filter>Textures\Fakes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="FakeTextureLoader.h">
+      <Filter>Textures\Fakes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Textures">
+      <UniqueIdentifier>{2ce2cf6e-d241-4602-b5d9-9da3867eb193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Textures\Fakes">
+      <UniqueIdentifier>{5a5e38d5-9d19-4ae5-bbcc-1d377aad182d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -27,7 +27,7 @@
  * +setBlock - zamiana przsyłania przez wartość na przesyłanie przez referencję
  * +sf::Vector2<> na sf::Vector2<>&
  * -Zmniejszenie liczby obiektów sf::Textures, w klasie Block przechowywany jest wskaźnik do konkretnej tekstury zamiast jej kopii
- * ?Klasa TextureManager do przetrzymywania textur, textury zapisane w map z kluczami w postaci string (nazwy plikow w razie nie posiadania wczytanej textury)
+ * ?Klasa TextureLoader do przetrzymywania textur, textury zapisane w map z kluczami w postaci string (nazwy plikow w razie nie posiadania wczytanej textury)
  * 
  * PLANY:
  * -zapis i wczytywanie stanu Stage z pliku

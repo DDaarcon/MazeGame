@@ -8,7 +8,8 @@
       <AdditionalIncludeDirectories>C:\Users\Admin\source\external\SFML-2.5.1\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>sfml-graphics.lib;sfml-main.lib;sfml-system.lib;sfml-window.lib;C:\Users\Admin\source\external\SFML-2.5.1\lib;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Admin\source\external\SFML-2.5.1\lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-main.lib;sfml-system.lib;sfml-window.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />

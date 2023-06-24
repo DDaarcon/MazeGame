@@ -1,5 +1,5 @@
 #include "Other.h"
-#include "TextureManager.h"
+#include "TextureLoader.h"
 #include <fstream>
 
 // TEXTUREHANLDER CLASS BEGIN
@@ -18,7 +18,7 @@ bool StageLoader::loadFromFile(const std::string& filename_, Stage& stage_) {
 		size_t dot = tempString.find('.');
 		std::string name = tempString.substr(0, dot);
 		std::string extension = tempString.substr(dot + 1);
-		TextureManager::load(name, extension);
+		//TextureLoader::loadInAdvance(name, extension);
 		textures[tempCh] = name;
 	}
 	int x, y;
@@ -33,7 +33,7 @@ bool StageLoader::loadFromFile(const std::string& filename_, Stage& stage_) {
 			try {
 				std::string* name = &textures.at(tempCh);
 				Block tempBlock(*name);
-				tempBlock.setTexture(TextureManager::getTextureAddress(*name));
+				//tempBlock.setTexture(TextureLoader::getTextureAddress(*name));
 				stage.setBlockStatic(sf::Vector2i(j, i), tempBlock);
 			} catch (...) {
 				std::cout << "Unexpected character in file during stage loading: " << tempCh << std::endl;

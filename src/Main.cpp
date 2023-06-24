@@ -3,7 +3,7 @@
 #include "BlockCharacter.h"
 #include "Stage.h"
 #include "Other.h"
-#include "TextureManager.h"
+#include "TextureLoader.h"
 
 void mouseBlockCreator(sf::Window& window_, Stage& st_, Block& block_);
 
@@ -29,13 +29,13 @@ int main(){
 	
 	//	BEGIN OF TEST OF STAGE
 	Character playerOne;
-	playerOne.setTexture(TextureManager::getTextureAddress("pionek", "png"));
+	//playerOne.setTexture(TextureLoader::getTextureAddress("pionek", "png"));
 	
 	Block BBBlock("Wall");
-	BBBlock.setTexture(TextureManager::getTextureAddress("black_block", "png"));
+	//BBBlock.setTexture(TextureLoader::getTextureAddress("black_block", "png"));
 
 	Block someBlock("Cauldron", 4);
-	someBlock.setTexture(TextureManager::getTextureAddress("cauldron", "png"));
+	//someBlock.setTexture(TextureLoader::getTextureAddress("cauldron", "png"));
 	
 	Stage stage(sf::Vector2i(100, 100), sf::Vector2f(32, 32), sf::Vector2f(0, 0));
 	StageLoader::loadFromFile("stage_to_load.txt", stage);
