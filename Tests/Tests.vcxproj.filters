@@ -12,6 +12,9 @@
     <ClCompile Include="FakeTextureLoader.cpp">
       <Filter>Textures\Fakes</Filter>
     </ClCompile>
+    <ClCompile Include="BoardPiecesStateTests.cpp">
+      <Filter>Board</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -25,6 +28,9 @@
     </Filter>
     <Filter Include="Textures\Fakes">
       <UniqueIdentifier>{5a5e38d5-9d19-4ae5-bbcc-1d377aad182d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Board">
+      <UniqueIdentifier>{1f8d9051-624a-4dd4-9fce-164b6e8d6ba4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

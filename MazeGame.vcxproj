@@ -137,6 +137,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\BlockCharacter.h" />
+    <ClInclude Include="src\Board.h" />
+    <ClInclude Include="src\BoardPiece.h" />
+    <ClInclude Include="src\BoardPieceDescription.h" />
+    <ClInclude Include="src\BoardPiecesState.h" />
     <ClInclude Include="src\GameLauncher.h" />
     <ClInclude Include="src\Other.h" />
     <ClInclude Include="src\Stage.h" />
@@ -144,6 +148,7 @@
     <ClInclude Include="src\TextureLoader.h" />
     <ClInclude Include="src\TexturePack.h" />
     <ClInclude Include="src\TextureType.h" />
+    <ClInclude Include="src\utils\trusted_ptr.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="images\black_block.png" />
@@ -159,6 +164,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\BlockCharacter.cpp" />
+    <ClCompile Include="src\Board.cpp" />
+    <ClCompile Include="src\BoardPiecesState.cpp" />
     <ClCompile Include="src\GameLauncher.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Other.cpp" />

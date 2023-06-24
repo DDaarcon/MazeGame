@@ -17,7 +17,7 @@ class Stage {
 	**/
 private:
 	sf::Vector2i sizeOfStage;	// x - table height (first []), y - table width (second [])
-	sf::Vector2f sizeOfOne;	// size of one block in px (x and y normal)
+	sf::Vector2f sizeOfOne;	// size of one _displayable in px (x and y normal)
 	sf::Vector2f position0;	// absolute position of whole stage (x and y normal)
 	enum CellState{
 		STATIC,
@@ -37,7 +37,7 @@ public:
 	
 	void makeBorders(Block& block_);
 	
-	void draw(sf::RenderWindow& w) const; // func sending command draw to every block in stage
+	void draw(sf::RenderWindow& w) const; // func sending command draw to every _displayable in stage
 	void draw(sf::RenderWindow& w, sf::View& view, const sf::Vector2i& relatedToCell) const;	// render only cell seen in window (performance +1000000 xd)
 	void setBlockStatic(const sf::Vector2i& blockNr_, Block& block_);	// or bool as returning type	// first row, then which one in that row ([y][x])
 	void setBlockDynamic(const sf::Vector2i& blockNr_, Block& block_);

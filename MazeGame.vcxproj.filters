@@ -31,6 +31,21 @@
     <Filter Include="Header Files\Textures\Models">
       <UniqueIdentifier>{b2fd17a6-d00a-4788-8536-694f853fedd0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Board">
+      <UniqueIdentifier>{19d6eeb5-b8af-4c12-b678-d7b04a486c0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Board">
+      <UniqueIdentifier>{94c918a1-dbfc-4e03-8ad0-0b68aa1ad4a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Board\Pieces">
+      <UniqueIdentifier>{16098ce0-48cf-43a8-a965-e851afd2fd40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Board\Pieces">
+      <UniqueIdentifier>{3fc2e7f8-32d9-46aa-892f-6a616979f435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{3f8384d7-0b6c-4ed2-b0f8-4c8f606db70a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BlockCharacter.h">
@@ -56,6 +71,21 @@
     </ClInclude>
     <ClInclude Include="src\TextureLoadData.h">
       <Filter>Header Files\Textures\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Board.h">
+      <Filter>Header Files\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BoardPiece.h">
+      <Filter>Header Files\Board\Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BoardPieceDescription.h">
+      <Filter>Header Files\Board\Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BoardPiecesState.h">
+      <Filter>Header Files\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\trusted_ptr.h">
+      <Filter>Header Files\Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +137,12 @@
     </ClCompile>
     <ClCompile Include="src\TexturePack.cpp">
       <Filter>Source Files\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Board.cpp">
+      <Filter>Source Files\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BoardPiecesState.cpp">
+      <Filter>Source Files\Board</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

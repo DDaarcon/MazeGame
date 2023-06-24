@@ -52,7 +52,7 @@ void Stage::draw(sf::RenderWindow& w, sf::View& view_, const sf::Vector2i& relat
 
 }
 
-void Stage::setBlockStatic(const sf::Vector2i& blockNr_, Block& block_)	// used when block can be copied to blockContainer/this func is used to set default blocks
+void Stage::setBlockStatic(const sf::Vector2i& blockNr_, Block& block_)	// used when _displayable can be copied to blockContainer/this func is used to set default blocks
 {
     cellStates[blockNr_.x][blockNr_.y] = STATIC;
     sf::Vector2f pos(blockNr_.x * sizeOfOne.x, blockNr_.y * sizeOfOne.y);
@@ -61,7 +61,7 @@ void Stage::setBlockStatic(const sf::Vector2i& blockNr_, Block& block_)	// used 
 	blockContainer[blockNr_.x][blockNr_.y].setPosAtStage(sf::Vector2i(blockNr_.x, blockNr_.y));
 	blockContainer[blockNr_.x][blockNr_.y].setAbsolutePosition(pos);
 }
-void Stage::setBlockDynamic(const sf::Vector2i& blockNr_, Block& block_){	// used only if block that is applied to blockArr exists somewhere (for example Character)
+void Stage::setBlockDynamic(const sf::Vector2i& blockNr_, Block& block_){	// used only if _displayable that is applied to blockArr exists somewhere (for example Character)
     cellStates[blockNr_.x][blockNr_.y] = DYNAMIC;
 	sf::Vector2f pos(blockNr_.x * sizeOfOne.x, blockNr_.y * sizeOfOne.y);
 	blockArr[blockNr_.x][blockNr_.y] = &block_;
@@ -96,7 +96,7 @@ void Stage::makeBorders(Block& block_){
 	}
 }
 
-// unnecessary i think
+// unnecessary, I think
 Stage& Stage::operator=(Stage& stage_) {
     if (&stage_ != this) {
 		sizeOfStage = stage_.sizeOfStage;

@@ -48,6 +48,7 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BoardPiecesStateTests.cpp" />
     <ClCompile Include="FakeTextureLoader.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">

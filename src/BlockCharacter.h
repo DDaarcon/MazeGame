@@ -117,7 +117,7 @@ public:
 		    sf::Keyboard::Key right_ = sf::Keyboard::Key::D,
 		    sf::Keyboard::Key bottom_ = sf::Keyboard::Key::S);
 
-	//set, get, del previous block
+	//set, get, del previous _displayable
 	void setPreviousBlock(Block* block_);
 	Block* getPreviousBlock() const;
 	void removePreviousBlock();

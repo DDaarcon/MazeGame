@@ -11,6 +11,7 @@ public:
 
 class TextureLoader : public ITextureLoader {
 public:
+	TextureLoader() = delete;
 	TextureLoader(const std::string& baseDictionary);
 
 	std::unique_ptr<sf::Texture> load(const std::string path);
